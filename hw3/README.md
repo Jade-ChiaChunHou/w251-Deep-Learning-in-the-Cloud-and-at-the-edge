@@ -1,16 +1,21 @@
 # Homework 3
 
 ## Jetson TX2 Setup
+
 ### Forwarder
 The code is in python/forwarder.py
 
+### Broker
+The docker image is in DockerFile/broker.
+
 ### Image Process
-The code is in python/img_processor.py
+The docker image is in DockerFile/img_processor. The code is in python/img_processor.py
 
 ### Face Detect
-The code is in python/face_detector.py
+The docker image is in DockerFile/face_detecor. The python code is in python/face_detector.py.
 
 ## IBM Cloud Setup
+
 ### Create Cloud Storage Object (S3)
 Create a Cloud Storage Object in IBM Cloud. Select the lite plan in cloud.ibm.com/resources.
 
