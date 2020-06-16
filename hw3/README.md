@@ -27,7 +27,7 @@ sudo make install
 ```
 ### Add the Cloud Storage Object Credentials
 ```
-echo "56a981b6d7eb4560ad69753a9fc50cfd:8dba0da08eeacc1193d2c108305930bae3c33c7a8446ce76" > $HOME/.cos_creds
+echo "<Access_Key_ID>:<Secret_Access_Key>" > $HOME/.cos_creds
 chmod 600 $HOME/.cos_creds
 
 sudo mkdir -m 777 /mnt/mybucket
