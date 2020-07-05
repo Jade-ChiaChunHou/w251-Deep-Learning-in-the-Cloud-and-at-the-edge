@@ -2,15 +2,20 @@
 
 ## Jetson TX2 Setup
 
+
 ### Face Detect
 The docker image is in DockerFile/face_detecor. The python code is in python/face_detector.py.
+```
 sudo docker build /home/nvidia/w251/hw3/dockerfile/face_detector
-
+```
 ### Forwarder
 The code is in python/forwarder.py
 
 ### Broker
 The docker image is in DockerFile/broker.
+```
+sudo docker build /home/nvidia/w251/hw3/dockerfile/broker
+```
 
 ### Image Process
 The docker image is in DockerFile/img_processor. The code is in python/img_processor.py
