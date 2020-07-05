@@ -19,7 +19,9 @@ sudo docker build /home/nvidia/w251/hw3/dockerfile/broker
 
 ### Image Process
 The docker image is in DockerFile/img_processor. The code is in python/img_processor.py
-
+```
+sudo docker build /home/nvidia/w251/hw3/dockerfile/img_processor
+```
 
 ## IBM Cloud Setup
 
