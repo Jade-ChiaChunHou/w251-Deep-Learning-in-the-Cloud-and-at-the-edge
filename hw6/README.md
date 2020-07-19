@@ -38,12 +38,17 @@ docker logs c2c4048fbb80f77901eb6dcd3420fe088627197c190cb1a59f2f1f1485a61e83
 http://158.175.83.187:8888/?token=37fc80398de86348fe56f0a6aa8600fb1d0d52162ebec7c2
 ```
 
-# HTML
+## jupyter notebook HTML
+> P100a VM
+```
+http://158.176.142.157:8888/notebooks/v2/week06/hw/P100_VM_BERT_classifying_toxicity_jade.ipynb
+```
 > V100a VM
 ```
 http://158.175.83.187:8888/notebooks/v2/week06/hw/V100_VM_BERT_classifying_toxicity_jade.ipynb
 ```
-# Model Execute Time in VM
+
+## Model Execute Time in VM
 V100_VM spend 1h 55min 12s.
 
 ## Compare the run time of P100a VM and V100a VM
