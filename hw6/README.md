@@ -3,7 +3,7 @@
 ## Create the machine
 > Create a P100a VM
 ```
-ibmcloud sl vs create --datacenter=lon06 --hostname=p100a --domain=dima.com --image=2263543 --billing=hourly  --network 1000 --key=1873822 --flavor AC1_8X60X100 --san
+ibmcloud sl vs create --datacenter=lon06 --hostname=p100a --domain=dima.com --image=2263543 --billing=hourly  --network 1000 --key=1873850 --flavor AC1_8X60X100 --san
 ```
 
 > Create a V100a VM
@@ -27,6 +27,8 @@ ssh -i ~/.ssh/id_rsa root@158.175.83.187
 > P100a VM run docker image and open the jupyter notebook in the machine
 ```
 nvidia-docker run --rm --name hw06 -p 8888:8888 -d w251/hw06:x86-64
+docker logs 7a41db1bd69fabbf384feabdfece10d0134b5130b9e169b7bbb305128a1cb5e2
+http://158.176.142.157:8888/?token=1646d985ec9bb479f3aeb8436e4f7633242e0d1baf412240
 ```
 
 > V100a VM run docker image and open the jupyter notebook in the machine
