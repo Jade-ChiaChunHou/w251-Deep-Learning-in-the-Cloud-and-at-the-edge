@@ -3,7 +3,7 @@
 ## Create the machine
 > Create a P100a VM
 ```
-ibmcloud sl vs create --datacenter=lon06 --hostname=p100a --domain=dima.com --image=2263543 --billing=hourly  --network 1000 --key=1872864 --flavor AC1_8X60X100 --san
+ibmcloud sl vs create --datacenter=lon06 --hostname=p100a --domain=dima.com --image=2263543 --billing=hourly  --network 1000 --key=1873822 --flavor AC1_8X60X100 --san
 ```
 
 > Create a V100a VM
