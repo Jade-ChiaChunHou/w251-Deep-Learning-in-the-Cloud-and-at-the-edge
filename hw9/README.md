@@ -8,10 +8,18 @@
 ```
 ibmcloud sl vs create --datacenter=lon06 --hostname=p100a --domain=dima.com --image=2263543 --billing=hourly  --network 1000 --key=1873850 --flavor AC1_16X120X100 --san
 ```
+> ssh into P100a VM
+```
+ssh -i ~/.ssh/id_rsa root@158.176.142.157
+```
 
 > Create a P100b VM
 ```
 ibmcloud sl vs create --datacenter=lon06 --hostname=p100b --domain=dima.com --image=2263543 --billing=hourly  --network 1000 --key=1873850 --flavor AC1_16X120X100 --san
+```
+> ssh into P100b VM
+```
+ssh -i ~/.ssh/id_rsa root@158.176.142.150
 ```
 
 > Create a V100a VM
