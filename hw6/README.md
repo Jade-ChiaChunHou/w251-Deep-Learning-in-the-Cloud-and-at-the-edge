@@ -50,6 +50,6 @@ http://158.175.83.187:8888/notebooks/v2/week06/hw/V100_VM_BERT_classifying_toxic
 
 ## Model Execute Time in VM
 - P100_VM spend 6h 19min 50s for training the 1M rows model.
-<img width="400" alt="P100_VM_RUN_TIME" src="https://user-images.githubusercontent.com/50607384/88460569-bf39a680-cecf-11ea-8cbb-0b14e747639a.png">
+- <img width="800" alt="P100_VM_RUN_TIME" src="https://user-images.githubusercontent.com/50607384/88460569-bf39a680-cecf-11ea-8cbb-0b14e747639a.png">
 - V100_VM spend 1h 55min 12s for training the 1M rows model.
 - V100_VM is 3 times faster than the P100_VM
