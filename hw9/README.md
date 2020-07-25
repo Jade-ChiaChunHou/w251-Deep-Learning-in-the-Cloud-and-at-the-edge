@@ -23,7 +23,7 @@ ibmcloud sl vs create --datacenter=lon06 --hostname=p100b --domain=dima.com --im
 ```
 ssh -i ~/.ssh/id_rsa root@158.176.142.150
 ```
-
+mpirun -n 2 -H 10.72.250.235,10.72.250.215 --allow-run-as-root hostname
 ```
 nohup mpirun --allow-run-as-root -n 4 -H 10.72.250.235:2,10.72.250.215:2 -bind-to none -map-by slot --mca btl_tcp_if_include eth0 -x NCCL_SOCKET_IFNAME=eth0 -x NCCL_DEBUG=INFO -x LD_LIBRARY_PATH python run.py --config_file=/data/transformer-base.py --use_horovod=True --mode=train_eval &
 ```
@@ -47,3 +47,8 @@ ibmcloud sl vs create --datacenter=lon04 --hostname=v100b --domain=dima.com --im
 ```
 ssh -i ~/.ssh/id_rsa root@158.175.102.146
 ```
+mpirun -n 2 -H 10.45.9.32,10.45.9.30 --allow-run-as-root hostname
+```
+nohup mpirun --allow-run-as-root -n 4 -H 10.45.9.32,10.45.9.30 -bind-to none -map-by slot --mca btl_tcp_if_include eth0 -x NCCL_SOCKET_IFNAME=eth0 -x NCCL_DEBUG=INFO -x LD_LIBRARY_PATH python run.py --config_file=/data/transformer-base.py --use_horovod=True --mode=train_eval &
+```
+mpirun --allow-run-as-root -n 4 -H 10.45.9.32:2,10.45.9.30:2 -bind-to none -map-by slot --mca btl_tcp_if_include eth0 -x NCCL_SOCKET_IFNAME=eth0 -x NCCL_DEBUG=INFO -x LD_LIBRARY_PATH python run.py --config_file=/data/transformer-base.py --use_horovod=True --mode=train_eval &
