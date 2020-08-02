@@ -27,9 +27,9 @@ class DQN:
 
         #######################
         # Change these parameters to improve performance
-        self.density_first_layer = 16
-        self.density_second_layer = 8
-        self.num_epochs = 1
+        self.density_first_layer = 24
+        self.density_second_layer = 12
+        self.num_epochs = 10
         self.batch_size = 64
         self.epsilon_min = 0.01
 
@@ -40,7 +40,7 @@ class DQN:
         self.gamma = 0.99
 
         # Learning rate
-        self.lr = 0.001
+        self.lr = 0.0005
 
         #######################
 
