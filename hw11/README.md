@@ -1,6 +1,12 @@
 # HW11
 
 1. What parameters did you change?
+
+ self.density_first_layer = 16
+        self.density_second_layer = 8
+        self.num_epochs = 1
+        self.batch_size = 64
+        self.epsilon_min = 0.01
 2. What values did you try?
 3. Did you try any other changes that made things better or worse?
 4. Did they improve or degrade the model? Did you have a test run with 100% of the scores above 200?
