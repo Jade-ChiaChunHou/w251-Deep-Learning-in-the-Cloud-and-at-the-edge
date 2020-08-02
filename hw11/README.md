@@ -39,7 +39,7 @@ The meaning if the hyperparameter:
 - **batch_size**: The batch size is a hyperparameter that defines the number of samples to work through before updating the internal model parameters.
 
 
-To conclude, in this example when increse the **num_epochs** the score will improve. That means the times that model run though the training set will increase. So the score will likely improve by increasing the number of the epochs.
+To conclude, in this example when increse the **num_epochs** the score will improve. That means the times that model run though the training set will increase. So the score will likely improve by increasing the number of the epochs. Increase the **density_first_layer**,  **density_second_layer** the score also improve. When the **batch_size** = 64 seems to have the better score. Also decrease the **lr** the score will improve, but it will also increase the training time.
 
 ## 6. What is the purpose of the epsilon value?
 The purpose of the epsilon value is to balance the exploration / exploitation in the Q-learning.
