@@ -31,6 +31,10 @@ When the **density_first_layer**,  **density_second_layer** bigger the rewards w
 
 ## 4. Did they improve or degrade the model? Did you have a test run with 100% of the scores above 200?
 
+For example the increse the **num_epochs**, will increase the times that model run though the training set. So the score will likely improve by increasing the number of the epochs.
+
+No, I didn't had a test run with 100% of the scores above 200.
+
 ## 5. Based on what you observed, what conclusions can you draw about the different parameters and their values?
 
 ## 6. What is the purpose of the epsilon value?
@@ -45,5 +49,5 @@ If set the epsilon = 0.2, that means we want to explore 20% and exploit 80%.
 ## 7. Describe "Q-Learning".
 Q-learning is an off-policy / model-free reinforcement learning algorithm that seeks to find the best action to take given the current state. It’s considered off-policy because the Q-learning function learns from actions that are outside the current policy, like taking random actions, and therefore a policy isn’t needed. More specifically, Q-learning seeks to learn a policy that maximizes the total reward.
 
-##IBM Object Storge link:
+## IBM Object Storge tarining episode link:
 http://s3.ap.cloud-object-storage.appdomain.cloud/w251jade/episode350.mp4
