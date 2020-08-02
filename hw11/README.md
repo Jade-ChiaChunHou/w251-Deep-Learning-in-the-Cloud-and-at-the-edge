@@ -5,7 +5,6 @@ I've tried changing the **density_first_layer**,  **density_second_layer**, **nu
 
 ## 2. What values did you try?
 ```
-#######################
 # Change these parameters to improve performance       
 self.density_first_layer = 16, 24, 
 self.density_second_layer = , 8, 12
@@ -24,7 +23,7 @@ self.lr = 0.001, 0.005, 0.0001
 ```
 
 ## 3. Did you try any other changes that made things better or worse?
-- When the **density_first_layer**,  **density_second_layer** bigger the rewards will increase, for example changing **density_first_layer** from 16 to 24 and **density_second_layer** 8 to 12. - - - - Increasing **num_epochs** the reward will also increase, but the training time will also incease.
+- When the **density_first_layer**,  **density_second_layer** bigger the rewards will increase, for example changing **density_first_layer** from 16 to 24 and **density_second_layer** 8 to 12. Increasing **num_epochs** the reward will also increase, but the training time will also incease.
 - When changing the **batch_size** to 32 or 128, the score become worse.
  
 ## 4. Did they improve or degrade the model? Did you have a test run with 100% of the scores above 200?
@@ -33,13 +32,14 @@ By changing the value of the **density_first_layer**,  **density_second_layer**,
 No, I didn't had a test run with 100% of the scores above 200.
 
 ## 5. Based on what you observed, what conclusions can you draw about the different parameters and their values?
-- **density_first_layer**
-- **density_second_layer**
+The meaning if the hyperparameter:
+- **density_first_layer**: The neuron number of first layer.
+- **density_second_layer**: The neuron number of second layer.
 - **num_epochs** : The number of epochs is a hyperparameter that defines the number times that the learning algorithm will work through the entire training dataset.
 - **batch_size**: The batch size is a hyperparameter that defines the number of samples to work through before updating the internal model parameters.
-- **epsilon_min**
 
-For example the increse the **num_epochs**, will increase the times that model run though the training set. So the score will likely improve by increasing the number of the epochs.
+
+To conclude, in this example when increse the **num_epochs** the score will improve. That means the times that model run though the training set will increase. So the score will likely improve by increasing the number of the epochs.
 
 ## 6. What is the purpose of the epsilon value?
 The purpose of the epsilon value is to balance the exploration / exploitation in the Q-learning.
