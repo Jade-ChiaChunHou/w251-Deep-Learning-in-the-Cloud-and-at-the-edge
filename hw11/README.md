@@ -45,6 +45,4 @@ If set the epsilon = 0.2, that means we want to explore 20% and exploit 80%.
 ## 7. Describe "Q-Learning".
 Q-learning is an off-policy / model-free reinforcement learning algorithm that seeks to find the best action to take given the current state. It’s considered off-policy because the Q-learning function learns from actions that are outside the current policy, like taking random actions, and therefore a policy isn’t needed. More specifically, Q-learning seeks to learn a policy that maximizes the total reward.
 
-IBM Object Storge link: http://s3.us.cloud-object-storage.appdomain.cloud/face-app/face-015.png
-s3.ap.cloud-object-storage.appdomain.cloud/w251jade/episode
-350..mp4
+IBM Object Storge link: http://s3.ap.cloud-object-storage.appdomain.cloud/w251jade/episode350..mp4
