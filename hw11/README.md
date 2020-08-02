@@ -1,7 +1,7 @@
 # HW11
 
 ## 1. What parameters did you change?
-I 
+I've tried changing the **density_first_layer**,  **density_second_layer**, **num_epochs**, **batch_size** and **epsilon_min**.
 ## 2. What values did you try?
 ```
  self.density_first_layer = 16
