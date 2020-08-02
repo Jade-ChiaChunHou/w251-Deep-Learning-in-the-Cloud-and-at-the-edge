@@ -17,3 +17,4 @@ When the **density_first_layer**,  **density_second_layer** bigger the rewards w
 ## 6. What is the purpose of the epsilon value?
 ## 7. Describe "Q-Learning".
 Q-learning is a model-free reinforcement learning algorithm to learn a policy telling an agent what action to take under what circumstances. It does not require a model (hence the connotation "model-free") of the environment, and it can handle problems with stochastic transitions and rewards, without requiring adaptations.
+$$Q^new(s_t, a_t)$$
