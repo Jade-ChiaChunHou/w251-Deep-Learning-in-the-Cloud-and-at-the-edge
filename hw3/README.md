@@ -47,4 +47,4 @@ chmod 600 $HOME/.cos_creds
 sudo mkdir -m 777 /mnt/mybucket
 sudo s3fs bucketname /mnt/mybucket -o passwd_file=$HOME/.cos_creds -o sigv2 -o use_path_request_style -o url=https://s3.us-east.objectstorage.softlayer.net
 ```
-### Create the docker image
+### Built container by docker image 
