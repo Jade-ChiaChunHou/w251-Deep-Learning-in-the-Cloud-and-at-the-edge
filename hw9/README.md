@@ -48,8 +48,6 @@ ibmcloud sl vs create --datacenter=lon04 --hostname=v100b --domain=dima.com --im
 ssh -i ~/.ssh/id_rsa root@158.175.102.146
 ssh-keygen -R 158.175.102.146
 ```
-mpirun -n 2 -H 10.45.9.32,10.45.9.30 --allow-run-as-root hostname
-
 
 ### Docker setup
 ```
@@ -57,6 +55,11 @@ docker build -t openseq2seq -f Dockerfile .
 docker run --runtime=nvidia -d --name openseq2seq --net=host -e SSH_PORT=4444 -v /data:/data -p 6006:6006 openseq2seq
 docker exec -ti openseq2seq bash
 docker container start
+```
+
+### Check the connection
+```
+mpirun -n 2 -H 10.45.9.32,10.45.9.30 --allow-run-as-root hostname
 ```
 
 ### Train the model
