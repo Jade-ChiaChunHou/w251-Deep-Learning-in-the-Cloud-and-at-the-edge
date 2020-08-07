@@ -49,12 +49,21 @@ ssh -i ~/.ssh/id_rsa root@158.175.102.146
 ssh-keygen -R 158.175.102.146
 ```
 mpirun -n 2 -H 10.45.9.32,10.45.9.30 --allow-run-as-root hostname
-```
-nohup mpirun --allow-run-as-root -n 4 -H 10.45.9.32,10.45.9.30 -bind-to none -map-by slot --mca btl_tcp_if_include eth0 -x NCCL_SOCKET_IFNAME=eth0 -x NCCL_DEBUG=INFO -x LD_LIBRARY_PATH python run.py --config_file=/data/transformer-base.py --use_horovod=True --mode=train_eval &
-```
-mpirun --allow-run-as-root -n 4 -H 10.45.9.32:2,10.45.9.30:2 -bind-to none -map-by slot --mca btl_tcp_if_include eth0 -x NCCL_SOCKET_IFNAME=eth0 -x NCCL_DEBUG=INFO -x LD_LIBRARY_PATH python /opt/OpenSeq2Seq/run.py --config_file=/data/transformer-base.py --use_horovod=True --mode=train_eval &
 
+
+### Docker setup
+```
 docker build -t openseq2seq -f Dockerfile .
 docker run --runtime=nvidia -d --name openseq2seq --net=host -e SSH_PORT=4444 -v /data:/data -p 6006:6006 openseq2seq
 docker exec -ti openseq2seq bash
 docker container start
+```
+
+### Train the model
+```
+# few output in console while training
+nohup mpirun --allow-run-as-root -n 4 -H 10.45.9.32,10.45.9.30 -bind-to none -map-by slot --mca btl_tcp_if_include eth0 -x NCCL_SOCKET_IFNAME=eth0 -x NCCL_DEBUG=INFO -x LD_LIBRARY_PATH python run.py --config_file=/data/transformer-base.py --use_horovod=True --mode=train_eval &
+
+# more output in console while training
+mpirun --allow-run-as-root -n 4 -H 10.45.9.32:2,10.45.9.30:2 -bind-to none -map-by slot --mca btl_tcp_if_include eth0 -x NCCL_SOCKET_IFNAME=eth0 -x NCCL_DEBUG=INFO -x LD_LIBRARY_PATH python /opt/OpenSeq2Seq/run.py --config_file=/data/transformer-base.py --use_horovod=True --mode=train_eval &
+```
