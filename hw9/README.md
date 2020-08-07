@@ -1,8 +1,7 @@
 # HW9
 
-## Create the machine
-
-"upgrade" them by adding a second 2 TB SAN drive to each VM, then format the 2TB disk and mount it to /data on each VM as described here under the "prepare the second disk" section. 
+### Create the machine
+Upgrade the VM by adding a second 2 TB SAN drive to each of them, then format the 2TB disk and mount it to /data on each VM as described here under the "prepare the second disk" section. 
 
 ### P100a VM
 > Create a P100a VM
